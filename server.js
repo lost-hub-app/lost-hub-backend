@@ -13,7 +13,7 @@ const Item = require("./models/item");
 const Category = require("./models/Category");
 
 // Auth middleware 
-// const verifyUser = require("./auth");
+const verifyUser = require("./auth");
 
 mongoose.connect(process.env.DB_URL);
 
@@ -42,19 +42,20 @@ app.delete("/items/:id", deleteItem);
 app.put("/items/:id", putItem);
 
 async function getItems(req, res, next) {
-  // Your implementation here
+  // implementation goes here
+  console.log('USER', req.user);
 }
 
 async function postItem(req, res, next) {
-  // Your implementation here
+  // implementation goes here
 }
 
 async function deleteItem(req, res, next) {
-  // Your implementation here
+  // implementation goes here
 }
 
 async function putItem(req, res, next) {
-  // Your implementation here
+  // implementation goes here
 }
 
 app.get("*", (req, res) => {
