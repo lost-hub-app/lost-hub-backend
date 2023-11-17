@@ -1,7 +1,6 @@
 # LostHub Server
 
-**Authors**:  Adnan Mohamud
-**Version**: 1.0.0
+**Authors**:  Adnan Mohamud, Ekaterina Khoroshilova, David Danilchik, Chester Lee Coloma
 
 ## Overview
 
