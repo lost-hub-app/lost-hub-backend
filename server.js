@@ -8,7 +8,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 // Models
-const User = require("./models/User");
+const User = require("./models/user");
 const Item = require("./models/item");
 const Category = require("./models/Category");
 
@@ -35,28 +35,45 @@ app.get("/test", (req, res) => {
   res.send("Test request received");
 });
 
-// Placeholder for the LostHub functionality
-app.get("/items", getItems);
-app.post("/items", postItem);
-app.delete("/items/:id", deleteItem);
-app.put("/items/:id", putItem);
+// Implementing CRUD operations for items
+app.get("/items", async (req, res) => {
+  try {
+    const items = await Item.find({});
+    res.status(200).json(items);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
-async function getItems(req, res, next) {
-  // implementation goes here
-  console.log('USER', req.user);
-}
+app.post("/items", async (req, res) => {
+  try {
+    const newItem = new Item(req.body);
+    const savedItem = await newItem.save();
+    res.status(201).json(savedItem);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
-async function postItem(req, res, next) {
-  // implementation goes here
-}
+app.delete("/items/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    await Item.findByIdAndDelete(id);
+    res.status(200).json({ message: 'Item successfully deleted' });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
-async function deleteItem(req, res, next) {
-  // implementation goes here
-}
-
-async function putItem(req, res, next) {
-  // implementation goes here
-}
+app.put("/items/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedItem = await Item.findByIdAndUpdate(id, req.body, { new: true });
+    res.status(200).json(updatedItem);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
 app.get("*", (req, res) => {
   res.status(404).send("Resource not found");
