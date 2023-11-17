@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 
 // Models
 const User = require("./models/User");
-const Item = require("./models/Item");
+const Item = require("./models/item");
 const Category = require("./models/Category");
 
 // Auth middleware 
