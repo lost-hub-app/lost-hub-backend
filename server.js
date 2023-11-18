@@ -15,6 +15,9 @@ const Category = require("./models/Category");
 // Auth middleware 
 const verifyUser = require("./auth");
 
+//Routes
+const uploadRoutes = require('./routes/upload');
+
 mongoose.connect(process.env.DB_URL);
 
 const db = mongoose.connection;
@@ -29,6 +32,8 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
 // app.use(verifyUser);
+
+app.use('/api/upload', uploadRoutes);
 
 // Routes
 app.get("/test", (req, res) => {
