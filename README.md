@@ -11,7 +11,7 @@
 
 ## Overview
 
-The LostHub server is an essential component of the LostHub application, designed to efficiently manage the reporting and tracking of lost and found items. With an aim to streamline the process of reconnecting people with their lost belongings, LostHub offers a user-friendly and comprehensive platform for users to report lost items, discover found items, and communicate with finders. This project is not just a technical solution but also a community service initiative to reduce the stress and impact of losing personal items.
+The Lost Hub Backend is an essential component of the LostHub application, designed to efficiently manage the reporting and tracking of lost and found items. With an aim to streamline the process of reconnecting people with their lost belongings, LostHub offers a user-friendly and comprehensive platform for users to report lost items, discover found items, and communicate with finders. This project is not just a technical solution but also a community service initiative to reduce the stress and impact of losing personal items.
 
 ## Getting Started
 
@@ -26,7 +26,7 @@ To get the LostHub server up and running on your machine, follow these instructi
 5. **Configure Environment Variables**:
    - Rename the `.env.sample` file to `.env`.
    - Update MONGO_DB in the `.env` file with mongoDB URI.
-   - Update GCS_BUCKET in the `.env` file with mongoDB URI.
+   - Update GCS_BUCKET in the `.env` file with Google Cloud Storage Bucket.
    - Update PORT in the `.env` file with a PORT number or `3001`.
    - Update JKWS_URI in the `.env` file with JSON Web Key Set from Auth0.
 6. **Launch the Express Server**: Run `npm start` or `npm run dev`.
