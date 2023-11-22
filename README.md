@@ -35,6 +35,10 @@ To get the LostHub server up and running on your machine, follow these instructi
 ## Domain Modeling
 ![Domain Modeling](./assets/domain-modeling.png)
 
+## Project Management Board
+
+[Trello](https://trello.com/b/K503Pxff/losthub)
+
 ## Architecture
 
 LostHub is structured using the MERN stack:
