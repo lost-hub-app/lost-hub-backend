@@ -1,6 +1,6 @@
 # LostHub Server
 
-![Lost Hub Logo](./assets/png401Logo.png)
+![Lost Hub Logo](./assets/lost-hub-logo.png)
 
 **Authors**:
 
@@ -18,7 +18,7 @@ The LostHub server is an essential component of the LostHub application, designe
 To get the LostHub server up and running on your machine, follow these instructions:
 
 1. **Clone the Repository**: `git clone https://github.com/your-username/losthub-server.git`
-2. **Navigate to the Project Directory**: `cd losthub-server`
+2. **Navigate to the Project Directory**: `cd lost-hub-backend`
 3. **Install Dependencies**: Run `npm install` to install the required dependencies.
 4. **Set Up MongoDB Database**:
    - Create a MongoDB database.
@@ -31,6 +31,9 @@ To get the LostHub server up and running on your machine, follow these instructi
    - Update JKWS_URI in the `.env` file with JSON Web Key Set from Auth0.
 6. **Launch the Express Server**: Run `npm start` or `npm run dev`.
 7. **Access the Application**: Open your web browser and go to the provided URL (typically `http://localhost:3001`).
+
+## Domain Modeling
+![Domain Modeling](./assets/domain-modeling.png)
 
 ## Architecture
 
