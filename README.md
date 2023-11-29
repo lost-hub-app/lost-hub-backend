@@ -2,6 +2,9 @@
 
 ![Lost Hub Logo](./assets/lost-hub-logo.png)
 
+## Live Demo
+Currently hosted on Netlify - <a href="https://lost-hub-app.netlify.app/">Link</a>
+
 **Authors**:
 
 - [Adnan Mohamud](https://github.com/adnanm123)
